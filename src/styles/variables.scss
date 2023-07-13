@@ -1,0 +1,16 @@
+:root {
+  --color-primary: #005689;
+  --color-dark: #000;
+  --color-white: #fff;
+  --color-yellow: rgb(255 188 0);
+  --color-green: #009d0c;
+  --color-blue: #005689;
+  --opacity-black: linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  );;
+  --opacity-white: linear-gradient(
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.5)
+  );
+}
