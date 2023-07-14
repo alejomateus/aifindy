@@ -1,0 +1,80 @@
+@import 'mixin-titles';
+
+@function get-font-weight($class) {
+	@if ($class == 'bold') {
+		@return 700;
+	} @else if ($class == 'semibold') {
+		@return 600;
+	} @else {
+		@return 400;
+	}
+}
+
+.bg-h1 {
+	@include bg-h1;
+	&-bold {
+		@include bg-h1;
+		font-weight: get-font-weight('bold');
+	}
+	&-semibold {
+		@include bg-h1;
+		font-weight: get-font-weight('semibold');
+	}
+	&-regular {
+		@include bg-h1;
+		font-weight: get-font-weight('regular');
+	}
+}
+
+.bg-h2-bold {
+	@include bg-h2;
+	font-weight: get-font-weight('bold');
+}
+.bg-h2-semibold {
+	@include bg-h2;
+	font-weight: get-font-weight('semibold');
+}
+.bg-h2-regular {
+	@include bg-h2;
+	font-weight: get-font-weight('regular');
+}
+
+.bg-h3-bold {
+	@include bg-h3;
+	font-weight: get-font-weight('bold');
+}
+.bg-h3-semibold {
+	@include bg-h3;
+	font-weight: get-font-weight('semibold');
+}
+.bg-h3-regular {
+	@include bg-h3;
+	font-weight: get-font-weight('regular');
+}
+
+.bg-body-bold {
+	@include bg-body;
+	font-weight: get-font-weight('bold');
+}
+.bg-body-semibold {
+	@include bg-body;
+	font-weight: get-font-weight('semibold');
+}
+.bg-body-regular {
+	@include bg-body;
+	font-weight: get-font-weight('regular');
+}
+
+.bg-desc-bold {
+	@include bg-desc;
+	font-weight: get-font-weight('bold');
+}
+.bg-desc-semibold {
+	@include bg-desc;
+	font-weight: get-font-weight('semibold');
+}
+.bg-desc-regular {
+	@include bg-desc;
+	font-weight: get-font-weight('regular');
+}
+

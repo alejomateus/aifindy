@@ -1,0 +1,29 @@
+@mixin bg-h1 {
+	font-size: 1.25rem;
+	margin: 0;
+	padding-right: 0.25rem;
+}
+
+@mixin bg-h2 {
+	font-size: 1.125rem;
+	margin: 0;
+	padding-right: 0.25rem;
+}
+
+@mixin bg-h3 {
+	font-size: 1.125rem;
+	margin: 0;
+	padding-right: 0.25rem;
+}
+
+@mixin bg-body {
+	font-size: 1rem;
+	margin: 0;
+	padding-right: 0.25rem;
+}
+
+@mixin bg-desc {
+	font-size: 1rem;
+	margin: 0;
+	padding-right: 0.25rem;
+}
