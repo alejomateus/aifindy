@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'home' },
+  { path: '', pathMatch: 'full', redirectTo: 'directory' },
   {
     path: 'home',
     loadChildren: () =>
@@ -19,9 +19,9 @@ const routes: Routes = [
       import('./modules/contact/contact.module').then((m) => m.ContactModule),
   },
   {
-    path: 'galery',
+    path: 'directory',
     loadChildren: () =>
-      import('./modules/galery/galery.module').then((m) => m.GaleryModule),
+      import('./modules/directory/directory.module').then((m) => m.DirectoryModule),
   },
   {
     path: 'resources',

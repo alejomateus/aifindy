@@ -1,20 +1,23 @@
 .cover_page {
   width: 100%;
   background-image: url(/assets/home/cover_page.JPG);
+  max-height: 768px;
 }
-.categories {
+.directory {
   max-width: 1024px;
   text-align: center;
   margin: auto;
 }
 .card {
   .card-body {
-    height: 80px;
+    height: 150px;
     padding: 0.5rem;
     color: white;
   }
 }
-
+.badge {
+  margin-right: 0.25rem;
+}
 @media (min-width: 768px) {
   .card-img-top {
     height: 200px;

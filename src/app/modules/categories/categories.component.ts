@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-categories',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./categories.component.scss']
 })
 export class CategoriesComponent {
+  constructor(private router: Router  ){
 
+  }
+  navigate(url: string, id: string){
+    this.router.navigate([`/${url}`,id])
+  }
 }
