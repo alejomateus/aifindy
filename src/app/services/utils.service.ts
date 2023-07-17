@@ -24,6 +24,20 @@ export class UtilsService {
         category: 'categoria2',
         tags: ['SEO', 'IA', 'Time'],
       },
+      {
+        image: 'assets/directory/perfect-essay-writer.avif',
+        url: 'https://www.perfectessaywriter.ai/',
+        title: 'PerfectEssayWriter.AI',
+        category: 'categoria',
+        tags: ['Texto', 'Redes Sociales', 'Educacion', 'Generador de Texto'],
+      },
+      {
+        image: 'assets/directory/fineshare.avif',
+        url: 'https://www.fineshare.com/zoom-background/',
+        title: 'Fineshare',
+        category: 'categoria',
+        tags: ['Generador de Imágenes', 'Redes Sociales', 'Divertido'],
+      },
     ];
     return data;
   }

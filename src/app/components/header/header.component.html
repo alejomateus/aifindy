@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" (click)="navigate('home')">AIFINDY</a>
+    <a class="navbar-brand" (click)="navigate('home')">SYSTEMIA.ONLINE</a>
     <button
       class="navbar-toggler"
       type="button"
@@ -34,13 +34,7 @@
         </li>
       </ul>
       <form class="d-flex">
-        <input
-          class="form-control me-2"
-          type="search"
-          placeholder="Search"
-          aria-label="Search"
-        />
-        <button class="btn btn-outline-info" type="button">Buscar</button>
+        <button class="btn btn-outline-info" type="button" (click)="open()">Buscar</button>
       </form>
     </div>
   </div>
