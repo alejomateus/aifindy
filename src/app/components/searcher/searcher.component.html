@@ -1,0 +1,42 @@
+<div class="modal-header">
+  <h4 class="modal-title">Busca lo que necesites</h4>
+  <button
+    type="button"
+    class="btn-close"
+    aria-label="Close"
+    (click)="activeModal.dismiss('Cross click')"
+  ></button>
+</div>
+<div class="modal-body">
+  <div class="pt-2">
+    <input
+      id="dateOfBirth"
+      class="form-control"
+      placeholder="Buscar..."
+      [(ngModel)]="searcher"
+      (input)="search()"
+    />
+  </div>
+  <div class="row pt-2">
+    <a
+      class="col-12 d-flex justify-content-start border mb-2 p-2 bg-info bg-opacity-10 border border-info rounded"
+      *ngFor="let item of dataFiltered"
+      [href]="item.url"
+      target="_blank"
+    >
+      <img [src]="item.image" alt="" width="50" />
+      <div class="m-auto">
+        {{ item.title }}
+      </div>
+    </a>
+  </div>
+</div>
+<div class="modal-footer">
+  <button
+    type="button"
+    class="btn btn-outline-dark"
+    (click)="activeModal.close('Close click')"
+  >
+    Cerrar
+  </button>
+</div>
