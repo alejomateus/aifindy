@@ -8,7 +8,7 @@ import { UtilsService } from '../../services/utils.service';
 })
 export class DirectoryComponent implements OnInit {
   data: any[] = [];
-  tags: any[] = [
+  tags: string[] = [
     'primary',
     'secondary',
     'success',
@@ -17,11 +17,39 @@ export class DirectoryComponent implements OnInit {
     'info',
     'light',
   ];
+  IATypes: any[] = [
+    {
+      name: 'De Pago',
+      active: false,
+    },
+    {
+      name: 'Gratis',
+      active: false,
+    },
+  ];
   constructor(private utilsService: UtilsService) {}
   ngOnInit() {
     this.data = this.utilsService.getData();
   }
-  sort() {
-    return 'badge text-bg-' + this.tags[Math.floor(Math.random() * this.tags.length)];
+  sort(): string {
+    return (
+      'badge text-bg-' + this.tags[Math.floor(Math.random() * this.tags.length)]
+    );
+  }
+  changeStatus(index: number) {
+    this.IATypes[index].active = !this.IATypes[index].active;
+
+    this.data = [...this.utilsService.getData()].filter((item) => {
+      if (!this.IATypes[1].active && !this.IATypes[0].active) {
+        return item;
+      }
+      if (this.IATypes[1].active && !item.price) {
+        return item;
+      }
+      if (this.IATypes[0].active && item.price) {
+        return item;
+      }
+
+    });
   }
 }

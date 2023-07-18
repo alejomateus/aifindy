@@ -15,15 +15,26 @@
           Descubre las mejores aplicaciones de inteligencia artificial
         </p>
       </div>
-      <div class="pt-2 pb-4">
+      <div class="pt-2">
         <p class="bg-h3-regular">
           Optimiza tus procesos de negocio y aumenta la eficiencia de tu
           empresa.
         </p>
       </div>
+      <div class="pt-2 pb-4 text-center">
+        <button
+          type="button"
+          class="btn me-2"
+          *ngFor="let IAType of IATypes; let i= index"
+          [ngClass]="IAType?.active ? 'btn-info' : 'btn-light'"
+          (click)="changeStatus(i)"
+        >
+          {{ IAType.name }}
+        </button>
+      </div>
       <div class="row directory">
         <div class="col-xs-12 col-sm-12 col-md-4 pb-4" *ngFor="let ia of data">
-          <div class="card" >
+          <div class="card">
             <a [href]="ia.url" target="_blank">
               <img class="card-img-top" [src]="ia.image" alt="Card image cap" />
             </a>
@@ -34,11 +45,9 @@
               </div>
               <div pb-2>{{ ia.price | currency }}</div>
               <div class="card-text" *ngIf="ia.tags">
-                <span
-                  *ngFor="let tag of ia.tags"
-                 [className]="sort()"
-                  >{{ tag }}</span
-                >
+                <span *ngFor="let tag of ia.tags" [className]="sort()">{{
+                  tag
+                }}</span>
               </div>
             </div>
           </div>
