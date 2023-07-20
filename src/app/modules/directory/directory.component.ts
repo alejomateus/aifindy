@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IA, IAType, accessType } from '../../models/ia';
 import { UtilsService } from '../../services/utils.service';
 
 @Component({
@@ -7,7 +8,7 @@ import { UtilsService } from '../../services/utils.service';
   styleUrls: ['./directory.component.scss'],
 })
 export class DirectoryComponent implements OnInit {
-  data: any[] = [];
+  data: IA[] = [];
   tags: string[] = [
     'primary',
     'secondary',
@@ -17,13 +18,21 @@ export class DirectoryComponent implements OnInit {
     'info',
     'light',
   ];
-  IATypes: any[] = [
+  IATypes: IAType[] = [
     {
       name: 'De Pago',
       active: false,
     },
     {
       name: 'Gratis',
+      active: false,
+    },
+    {
+      name: 'Freemium',
+      active: false,
+    },
+    {
+      name: 'Free Trial',
       active: false,
     },
   ];
@@ -36,20 +45,41 @@ export class DirectoryComponent implements OnInit {
       'badge text-bg-' + this.tags[Math.floor(Math.random() * this.tags.length)]
     );
   }
-  changeStatus(index: number) {
+  changeStatus(index: number): void {
     this.IATypes[index].active = !this.IATypes[index].active;
-
-    this.data = [...this.utilsService.getData()].filter((item) => {
-      if (!this.IATypes[1].active && !this.IATypes[0].active) {
-        return item;
+    let allTypes = false;
+    this.data = [...this.utilsService.getData()].filter((ia: any) => {
+      for (let i = 0; i < this.IATypes.length; i++) {
+        if (this.IATypes[i].active && this.IATypes[i].name === ia.accessType) {
+          return ia;
+        }
+        if (this.IATypes[i].active) {
+          allTypes = true;
+        }
       }
-      if (this.IATypes[1].active && !item.price) {
-        return item;
-      }
-      if (this.IATypes[0].active && item.price) {
-        return item;
-      }
-
     });
+    if (allTypes == false) {
+      this.data = [...this.utilsService.getData()];
+    }
+  }
+  getClass(accessType: accessType) {
+    let cssClass = 'badge text-bg-';
+    switch (accessType) {
+      case 'De Pago':
+        cssClass += this.tags[2];
+        break;
+      case 'Free Trial':
+        cssClass += this.tags[4];
+        break;
+      case 'Freemium':
+        cssClass += this.tags[5];
+        break;
+      case 'Gratis':
+        cssClass += this.tags[3];
+        break;
+      default:
+        break;
+    }
+    return cssClass;
   }
 }

@@ -8,7 +8,7 @@
   </div>
   <div class="row bg-dark">
     <div class="col"></div>
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-4 text-center">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-2 text-center">
       <span class="bg-h1-bold">Directorio en Galería </span>
       <div class="py-2">
         <p class="bg-h2-regular" [style.color]="'var(--color-yellow)'">
@@ -25,7 +25,7 @@
         <button
           type="button"
           class="btn me-2"
-          *ngFor="let IAType of IATypes; let i= index"
+          *ngFor="let IAType of IATypes; let i = index"
           [ngClass]="IAType?.active ? 'btn-info' : 'btn-light'"
           (click)="changeStatus(i)"
         >
@@ -33,17 +33,29 @@
         </button>
       </div>
       <div class="row directory">
-        <div class="col-xs-12 col-sm-12 col-md-4 pb-4" *ngFor="let ia of data">
+        <div
+          class="col-xs-12 col-sm-12 col-md-6 col-lg-4 pb-4"
+          *ngFor="let ia of data"
+        >
           <div class="card">
             <a [href]="ia.url" target="_blank">
-              <img class="card-img-top" [src]="ia.image" alt="Card image cap" />
+              <img
+                class="card-img-top"
+                [src]="'assets/directory/' + ia.image"
+                alt="Card image cap"
+              />
             </a>
             <div class="card-body bg-dark text-start">
               <div class="card-title">{{ ia.title }}</div>
               <div class="card-subtitle mb-2 text-muted">
-                <span class="badge text-bg-info">{{ ia.category }}</span>
+                <span [class]="getClass(ia.accessType)">{{
+                  ia.accessType
+                }}</span>
               </div>
-              <div pb-2>{{ ia.price | currency }}</div>
+              <p class="card-text bg-desc-regular">
+                {{ ia.description }}
+              </p>
+              <div class="pb-1">{{ ia.price | currency }}</div>
               <div class="card-text" *ngIf="ia.tags">
                 <span *ngFor="let tag of ia.tags" [className]="sort()">{{
                   tag

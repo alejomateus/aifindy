@@ -4,13 +4,14 @@
   max-height: 768px;
 }
 .directory {
-  max-width: 1024px;
+  max-width: 82.5rem;
   text-align: center;
   margin: auto;
 }
 .card {
+  border-color: white !important;
   .card-body {
-    height: 180px;
+    height: 15rem;
     padding: 0.5rem;
     color: white;
   }

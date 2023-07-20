@@ -9,7 +9,7 @@ import { UtilsService } from '../../services/utils.service';
 })
 export class SearcherComponent {
   searcher: string = '';
-  dataFiltered: any[];
+  dataFiltered: any[] = [];
   constructor(
     public activeModal: NgbActiveModal,
     private utilsService: UtilsService
@@ -17,12 +17,14 @@ export class SearcherComponent {
 
   search() {
     if (this.searcher !== '') {
-      this.dataFiltered = [...this.utilsService.getData()].filter((item) => {
-        const text = item.title.toLocaleLowerCase().trim();
-        if (text.includes(this.searcher.toLocaleLowerCase().trim())) {
-          return item;
+      this.dataFiltered = [...this.utilsService.getData()].filter(
+        (item: any) => {
+          const text = item.title.toLocaleLowerCase().trim();
+          if (text.includes(this.searcher.toLocaleLowerCase().trim())) {
+            return item;
+          }
         }
-      });
+      );
     } else {
       this.dataFiltered = [];
     }
