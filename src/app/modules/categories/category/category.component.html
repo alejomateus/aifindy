@@ -2,54 +2,57 @@
   <div class="row">
     <div class="col"></div>
     <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
-      <img src="/assets/home/cover_page2.JPG" alt="cover_page" class="w-100" />
+      <img
+        [src]="'/assets/categories/' + category.image"
+        alt="cover_page"
+        class="w-100"
+      />
     </div>
     <div class="col"></div>
   </div>
   <div class="row bg-dark">
     <div class="col"></div>
-    <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10  p-4 text-center">
-      <span class="bg-h1-bold "
-        >Redes Sociales, Marketing, SEO
-      </span>
-      <div class="alert alert-primary"  (click)="navigate('categories')" role="alert">← Todas las categorías</div>
-      <div class="row categories">
-        <div class="col-xs-12 col-sm-12 col-md-4 pb-4 ">
-          <div class="card">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-4 text-center">
+      <span class="bg-h1-bold">{{ category.name }} </span>
+      <div
+        class="alert alert-primary"
+        (click)="navigate('categories')"
+        role="alert"
+      >
+        ← Todas las categorías
+      </div>
+      <div class="row directory">
+        <div
+        class="col-xs-12 col-sm-12 col-md-6 col-lg-4 pb-4"
+        *ngFor="let ia of data"
+      >
+        <div class="card">
+          <a [href]="ia.url" target="_blank">
             <img
               class="card-img-top"
-              src="assets/home/redes.avif"
+              [src]="'assets/directory/' + ia.image"
               alt="Card image cap"
             />
-            <div class="card-body bg-dark">
-              <div class="card-title">Redes Sociales, Marketing, SEO</div>
+          </a>
+          <div class="card-body bg-dark text-start">
+            <div class="card-title">{{ ia.title }}</div>
+            <div class="card-subtitle mb-2 text-muted">
+              <span [class]="getClass(ia.accessType)">{{
+                ia.accessType
+              }}</span>
+            </div>
+            <p class="card-text bg-desc-regular">
+              {{ ia.description }}
+            </p>
+            <div class="pb-1" *ngIf="ia.price">{{ ia.price | currency }}</div>
+            <div class="card-text" *ngIf="ia.tags">
+              <span *ngFor="let tag of ia.tags" [className]="sort()">{{
+                tag
+              }}</span>
             </div>
           </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-4 pb-4">
-          <div class="card">
-            <img
-              class="card-img-top"
-              src="assets/home/fotos.avif"
-              alt="Card image cap"
-            />
-            <div class="card-body bg-dark">
-              <div class="card-title">Fotos, Arte, Avatar</div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-4 pb-4">
-          <div class="card">
-            <img
-              class="card-img-top"
-              src="assets/home/textos.avif"
-              alt="Card image cap"
-            />
-            <div class="card-body bg-dark">
-              <div class="card-title">Textos, Emails, Escrito</div>
-            </div>
-          </div>
-        </div>
+      </div>
       </div>
     </div>
     <div class="col"></div>

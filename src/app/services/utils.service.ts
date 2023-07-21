@@ -13,7 +13,6 @@ export class UtilsService {
         image: 'adcreative-creativos.png',
         url: 'https://es.adcreative.ai/',
         title: 'AdCreative',
-        category: '',
         accessType: 'Free Trial',
         price: 29,
         description:
@@ -35,7 +34,6 @@ export class UtilsService {
         image: '2short.png',
         url: 'https://2short.ai/',
         title: '2short',
-        category: '',
         accessType: 'Freemium',
         price: 9.99,
         description:
@@ -53,7 +51,6 @@ export class UtilsService {
         image: 'Copymatic.png',
         url: 'https://copymatic.ai/',
         title: 'Copymatic',
-        category: '',
         accessType: 'Free Trial',
         price: 29,
         description:
@@ -64,7 +61,6 @@ export class UtilsService {
         image: 'DALL-E 2.png',
         url: 'https://openai.com/',
         title: 'DALL-E 2',
-        category: '',
         accessType: 'Freemium',
         price: 15,
         description:
@@ -76,7 +72,6 @@ export class UtilsService {
         image: 'Fliki.png',
         url: 'https://fliki.ai/',
         title: 'Fliki',
-        category: '',
         accessType: 'Freemium',
         price: 29,
         description:
@@ -95,7 +90,6 @@ export class UtilsService {
         image: 'Humata AI.png',
         url: 'https://www.humata.ai/',
         title: 'Humata AI',
-        category: '',
         accessType: 'Freemium',
         price: 14.99,
         description:
@@ -106,7 +100,6 @@ export class UtilsService {
         image: 'Midjourney.png',
         url: 'https://www.midjourney.com/home/',
         title: 'Midjourney',
-        category: '',
         accessType: 'Freemium',
         price: 10,
         description:
@@ -117,7 +110,6 @@ export class UtilsService {
         image: 'RunwayML.png',
         url: 'https://runwayml.com/',
         title: 'RunwayML',
-        category: '',
         accessType: 'Freemium',
         price: 15,
         description:
@@ -137,7 +129,6 @@ export class UtilsService {
         image: 'Rytr.png',
         url: 'https://rytr.me/',
         title: 'Rytr',
-        category: '',
         accessType: 'Freemium',
         price: 9,
         description: 'Rytr AI es una plataforma de redacción asistida por IA.',
@@ -145,9 +136,8 @@ export class UtilsService {
       },
       {
         image: 'Synthesia.png',
-        url: '​​https://www.synthesia.io/',
+        url: 'https://www.synthesia.io/',
         title: 'Synthesia',
-        category: '',
         accessType: 'De Pago',
         price: 26,
         description:
@@ -159,14 +149,13 @@ export class UtilsService {
           'Texto a Voz',
           'Redes Sociales',
           'Marketing',
-          'Habla',
+          'Habla'
         ],
       },
       {
         image: 'BHuman.png',
-        url: '​​https://app.bhuman.ai/',
+        url: 'https://app.bhuman.ai/',
         title: 'BHuman',
-        category: '',
         accessType: 'Free Trial',
         price: 39,
         description:
@@ -185,9 +174,8 @@ export class UtilsService {
       },
       {
         image: 'Jasper AI.png',
-        url: '​​https://www.jasper.ai/',
+        url: 'https://www.jasper.ai/',
         title: 'Jasper AI',
-        category: '',
         accessType: 'Free Trial',
         price: 40,
         description:
@@ -196,9 +184,8 @@ export class UtilsService {
       },
       {
         image: 'Looka.png',
-        url: '​​https://looka.com/',
+        url: 'https://looka.com/',
         title: 'Looka',
-        category: '',
         accessType: 'Freemium',
         price: 20,
         description:
@@ -206,21 +193,18 @@ export class UtilsService {
         tags: ['Logos'],
       },
       {
-        image: 'Namecheap Logo Maker.png',
-        url: '​​https://sorare.com/',
+        image: 'Namecheap.png',
+        url: 'https://sorare.com/',
         title: '​​Namecheap Logo Maker',
-        category: '',
         accessType: 'Gratis',
-        price: null,
-        description:
-          'Namecheap Logo Maker: Crea logotipos personalizados fácilmente con amplias opciones de diseño para descargar totalmente gratis.',
+        price: 10,
+        description: 'Namecheap ',
         tags: ['Logos', 'Marketing'],
       },
       {
         image: 'QuillBot Paraphraser.png',
-        url: '​​https://quillbot.com/',
+        url: 'https://quillbot.com/',
         title: '​​QuillBot Paraphraser',
-        category: '',
         accessType: 'Freemium',
         price: 8.33,
         description:
@@ -229,9 +213,8 @@ export class UtilsService {
       },
       {
         image: 'Smodin.png',
-        url: '​​https://smodin.io/',
+        url: 'https://smodin.io/',
         title: '​​Smodin',
-        category: '',
         accessType: 'Freemium',
         price: 10,
         description:
@@ -240,9 +223,8 @@ export class UtilsService {
       },
       {
         image: '10Web.png',
-        url: '​​https://10web.io/',
+        url: 'https://10web.io/',
         title: '​​10Web',
-        category: '',
         accessType: 'Free Trial',
         price: 10,
         description:
@@ -251,9 +233,8 @@ export class UtilsService {
       },
       {
         image: 'AI Image Enlarger.png',
-        url: '​​https://imglarger.com/',
+        url: 'https://imglarger.com/',
         title: '​​AI Image Enlarger',
-        category: '',
         accessType: 'Freemium',
         price: 9,
         description:
@@ -262,9 +243,8 @@ export class UtilsService {
       },
       {
         image: 'AI-Writer.com.png',
-        url: '​​https://ai-writer.com/',
+        url: 'https://ai-writer.com/',
         title: '​​AI-Writer.com',
-        category: '',
         accessType: 'Free Trial',
         price: 29,
         description:
@@ -273,9 +253,8 @@ export class UtilsService {
       },
       {
         image: 'AIHelperBot.png',
-        url: '​​https://aihelperbot.com/',
+        url: 'https://aihelperbot.com/',
         title: '​​AIHelperBot',
-        category: '',
         accessType: 'Free Trial',
         price: 9,
         description:
@@ -284,9 +263,8 @@ export class UtilsService {
       },
       {
         image: 'AISEO.png',
-        url: '​​https://aiseo.ai/',
+        url: 'https://aiseo.ai.com/',
         title: '​​AISEO',
-        category: '',
         accessType: 'Free Trial',
         price: 15,
         description:
@@ -302,9 +280,8 @@ export class UtilsService {
       },
       {
         image: 'Anyword.png',
-        url: '​​https://anyword.com/',
+        url: 'https://anyword.com/',
         title: '​​Anyword',
-        category: '',
         accessType: 'Free Trial',
         price: 24,
         description:
@@ -313,9 +290,8 @@ export class UtilsService {
       },
       {
         image: 'AppIcons AI.png',
-        url: '​​https://appicons.ai/',
+        url: 'https://appicons.ai/',
         title: '​​AppIcons AI',
-        category: '',
         accessType: 'Freemium',
         price: 5,
         description:
@@ -324,9 +300,8 @@ export class UtilsService {
       },
       {
         image: 'Article Fiesta.png',
-        url: '​​https://articlefiesta.com/',
+        url: 'https://articlefiesta.com/',
         title: '​​Article Fiesta',
-        category: '',
         accessType: 'Free Trial',
         price: 20,
         description:
@@ -335,9 +310,8 @@ export class UtilsService {
       },
       {
         image: 'ArticleForge.png',
-        url: '​​https://www.articleforge.com/',
+        url: 'https://www.articleforge.com/',
         title: '​​ArticleForge',
-        category: '',
         accessType: 'Free Trial',
         price: 13,
         description:
@@ -346,9 +320,8 @@ export class UtilsService {
       },
       {
         image: 'ArtSpace.ai.png',
-        url: '​​https://www.artspace.ai/',
+        url: 'https://www.artspace.ai/',
         title: '​​ArtSpace.ai',
-        category: '',
         accessType: 'De Pago',
         price: 227,
         description:
@@ -357,9 +330,8 @@ export class UtilsService {
       },
       {
         image: 'Bertha.ai.png',
-        url: '​​https://bertha.ai/',
+        url: 'https://bertha.ai/',
         title: '​​Bertha.ai',
-        category: '',
         accessType: 'Freemium',
         price: 20,
         description:
@@ -368,9 +340,8 @@ export class UtilsService {
       },
       {
         image: 'Botowski.png',
-        url: '​​https://www.botowski.com/',
+        url: 'https://www.botowski.com/',
         title: '​​Botowski',
-        category: '',
         accessType: 'Free Trial',
         price: 19,
         description:
@@ -379,9 +350,8 @@ export class UtilsService {
       },
       {
         image: 'BrowseAI.png',
-        url: '​​https://www.browse.ai/',
+        url: 'https://www.browse.ai/',
         title: '​​BrowseAI',
-        category: '',
         accessType: 'Freemium',
         price: 39,
         description:
@@ -390,9 +360,8 @@ export class UtilsService {
       },
       {
         image: 'Chatbase.png',
-        url: '​​https://www.chatbase.co/',
+        url: 'https://www.chatbase.co/',
         title: '​​Chatbase',
-        category: '',
         accessType: 'Freemium',
         price: 10,
         description:
@@ -401,9 +370,8 @@ export class UtilsService {
       },
       {
         image: 'ChatPDF.png',
-        url: '​​https://www.chatpdf.com/',
+        url: 'https://www.chatpdf.com/',
         title: '​​ChatPDF',
-        category: '',
         accessType: 'Freemium',
         price: 5,
         description:
@@ -412,9 +380,8 @@ export class UtilsService {
       },
       {
         image: 'ChefGPT.png',
-        url: '​​https://www.chefgpt.xyz/',
+        url: 'https://www.chefgpt.xyz/',
         title: '​​ChefGPT',
-        category: '',
         accessType: 'Freemium',
         price: 2.99,
         description:
@@ -423,9 +390,8 @@ export class UtilsService {
       },
       {
         image: 'Contentfries.png',
-        url: '​​https://www.contentfries.com/',
+        url: 'https://www.contentfries.com/',
         title: '​​Contentfries',
-        category: '',
         accessType: 'Free Trial',
         price: 9,
         description:
@@ -434,9 +400,8 @@ export class UtilsService {
       },
       {
         image: 'Copy.ai.png',
-        url: '​​https://www.copy.ai/',
+        url: 'https://www.copy.ai/',
         title: '​​Copy.ai',
-        category: '',
         accessType: 'Freemium',
         price: 49,
         description:
@@ -445,9 +410,8 @@ export class UtilsService {
       },
       {
         image: 'CopyMonkey.ai.png',
-        url: '​​https://copymonkey.ai/',
+        url: 'https://copymonkey.ai/',
         title: '​​CopyMonkey.ai',
-        category: '',
         accessType: 'Free Trial',
         price: 24,
         description:
@@ -456,9 +420,8 @@ export class UtilsService {
       },
       {
         image: 'CrawlQ.ai.png',
-        url: '​​https://crawlq.ai/',
+        url: 'https://crawlq.ai/',
         title: '​​CrawlQ.ai',
-        category: '',
         accessType: 'Free Trial',
         price: 49,
         description:
@@ -467,9 +430,8 @@ export class UtilsService {
       },
       {
         image: 'Creaitor AI.png',
-        url: '​​https://www.creaitor.ai/',
+        url: 'https://www.creaitor.ai/',
         title: '​​Creaitor AI',
-        category: '',
         accessType: 'Freemium',
         price: 9,
         description:
@@ -478,9 +440,8 @@ export class UtilsService {
       },
       {
         image: 'Easy-Peasy.AI.png',
-        url: '​​https://easy-peasy.ai/',
+        url: 'https://easy-peasy.ai/',
         title: '​​Easy-Peasy.AI',
-        category: '',
         accessType: 'Freemium',
         price: 4.99,
         description:
@@ -489,9 +450,8 @@ export class UtilsService {
       },
       {
         image: 'Eightify.png',
-        url: '​​https://eightify.app/',
+        url: 'https://eightify.app/',
         title: '​​Eightify',
-        category: '',
         accessType: 'Freemium',
         price: null,
         description:
@@ -500,9 +460,8 @@ export class UtilsService {
       },
       {
         image: 'Eilla AI.png',
-        url: '​​https://eilla.ai/',
+        url: 'https://eilla.ai/',
         title: '​​Eilla AI',
-        category: '',
         accessType: 'Freemium',
         price: 14,
         description:
@@ -523,9 +482,8 @@ export class UtilsService {
       },
       {
         image: 'Elephas.png',
-        url: '​​https://elephas.app/',
+        url: 'https://elephas.app/',
         title: '​​Elephas',
-        category: '',
         accessType: 'Free Trial',
         price: 4.99,
         description:
@@ -534,5 +492,16 @@ export class UtilsService {
       },
     ];
     return data;
+  }
+  getCategories(): any[] {
+    return [
+      {
+        name: 'Texto',
+        title: 'Textos, Emails, Escrito',
+        subtitle: '',
+        description: '',
+        image: 'Midjourney.png',
+      },
+    ];
   }
 }

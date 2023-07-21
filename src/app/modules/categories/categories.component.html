@@ -22,46 +22,17 @@
       <div class="row categories">
         <div
           class="col-xs-12 col-sm-12 col-md-4 pb-4"
-          (click)="navigate('categories', 'fotos-arte-avatar')"
+          (click)="navigate('categories', category.name)"
+          *ngFor="let category of categories"
         >
           <div class="card">
             <img
               class="card-img-top"
-              src="assets/home/redes.avif"
+              [src]="'assets/categories/' + category.image"
               alt="Card image cap"
             />
             <div class="card-body bg-dark">
-              <div class="card-title">Redes Sociales, Marketing, SEO</div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="col-xs-12 col-sm-12 col-md-4 pb-4"
-          (click)="navigate('categories', 'fotos-arte-avatar')"
-        >
-          <div class="card">
-            <img
-              class="card-img-top"
-              src="assets/home/fotos.avif"
-              alt="Card image cap"
-            />
-            <div class="card-body bg-dark">
-              <div class="card-title">Fotos, Arte, Avatar</div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="col-xs-12 col-sm-12 col-md-4 pb-4"
-          (click)="navigate('categories', 'fotos-arte-avatar')"
-        >
-          <div class="card">
-            <img
-              class="card-img-top"
-              src="assets/home/textos.avif"
-              alt="Card image cap"
-            />
-            <div class="card-body bg-dark">
-              <div class="card-title">Textos, Emails, Escrito</div>
+              <div class="card-title">{{ category.title }}</div>
             </div>
           </div>
         </div>

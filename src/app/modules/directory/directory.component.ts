@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 import { IA, IAType, accessType } from '../../models/ia';
 import { UtilsService } from '../../services/utils.service';
 
@@ -36,14 +37,33 @@ export class DirectoryComponent implements OnInit {
       active: false,
     },
   ];
-  constructor(private utilsService: UtilsService) {}
+  constructor(private utilsService: UtilsService,
+    private sanitizer: DomSanitizer) {}
   ngOnInit() {
-    this.data = this.utilsService.getData();
+    this.data = [...this.utilsService.getData()];
   }
   sort(): string {
     return (
       'badge text-bg-' + this.tags[Math.floor(Math.random() * this.tags.length)]
     );
+  }
+  getClass(accessType: accessType) {
+    let cssClass = 'badge text-bg-';
+    switch (accessType) {
+      case 'De Pago':
+        cssClass += this.tags[2];
+        break;
+      case 'Free Trial':
+        cssClass += this.tags[4];
+        break;
+      case 'Freemium':
+        cssClass += this.tags[5];
+        break;
+      case 'Gratis':
+        cssClass += this.tags[3];
+        break;
+    }
+    return cssClass;
   }
   changeStatus(index: number): void {
     this.IATypes[index].active = !this.IATypes[index].active;
@@ -62,24 +82,7 @@ export class DirectoryComponent implements OnInit {
       this.data = [...this.utilsService.getData()];
     }
   }
-  getClass(accessType: accessType) {
-    let cssClass = 'badge text-bg-';
-    switch (accessType) {
-      case 'De Pago':
-        cssClass += this.tags[2];
-        break;
-      case 'Free Trial':
-        cssClass += this.tags[4];
-        break;
-      case 'Freemium':
-        cssClass += this.tags[5];
-        break;
-      case 'Gratis':
-        cssClass += this.tags[3];
-        break;
-      default:
-        break;
-    }
-    return cssClass;
+  sanitizator(url: string): SafeUrl{
+    return this.sanitizer.bypassSecurityTrustUrl(url);
   }
 }

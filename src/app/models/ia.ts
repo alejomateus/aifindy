@@ -2,7 +2,6 @@ export interface IA {
   image: string;
   url: string;
   title: string;
-  category: string;
   accessType: accessType;
   price: number | null;
   description: string;
@@ -14,3 +13,10 @@ export interface IAType {
 }
 
 export type accessType = 'De Pago' | 'Gratis' | 'Freemium' | 'Free Trial';
+export interface category {
+  name: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  image: string;
+}
