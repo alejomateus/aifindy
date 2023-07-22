@@ -9,6 +9,9 @@
   margin: auto;
 }
 .card {
+  .card-img-top{
+    cursor: pointer;
+  }
   border-color: white !important;
   .card-body {
     height: 15rem;

@@ -19,6 +19,10 @@
 .badge {
   margin-right: 0.25rem;
 }
+.alert-warning {
+  text-decoration: underline;
+  font-weight: bold;
+}
 @media (min-width: 768px) {
   .card-img-top {
     height: 200px;

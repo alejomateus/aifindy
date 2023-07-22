@@ -8,10 +8,16 @@
   margin: auto;
 }
 .card {
+  .card-img-top{
+    cursor: pointer;
+  }
   .card-body {
-    height: 80px;
+    height: 3rem;
     padding: 0.5rem;
     color: white;
+    .card-title{
+      margin-top: auto;
+    }
   }
 }
 
