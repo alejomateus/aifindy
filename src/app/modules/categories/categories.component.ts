@@ -18,4 +18,7 @@ export class CategoriesComponent implements OnInit {
   navigate(url: string, id: string) {
     this.router.navigate([`/${url}`, id]);
   }
+  getTemplateMode(): string {
+    return localStorage.getItem('templateMode') || 'light';
+  }
 }

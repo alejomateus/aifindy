@@ -85,4 +85,7 @@ export class DirectoryComponent implements OnInit {
   sanitizator(url: string): SafeUrl{
     return this.sanitizer.bypassSecurityTrustUrl(url);
   }
+  getTemplateMode(): string {
+    return localStorage.getItem('templateMode') || 'light';
+  }
 }

@@ -1,13 +1,23 @@
-<div class="modal-header">
+<div
+  class="modal-header"
+  [class]="
+    getTemplateMode() !== 'dark' ? 'bg-dark text-white' : 'bg-light text-muted'
+  "
+>
   <h4 class="modal-title">Busca la IA que necesites</h4>
-  <button
+  <!-- <button
     type="button"
     class="btn-close"
     aria-label="Close"
     (click)="activeModal.dismiss('Cross click')"
-  ></button>
+  ></button> -->
 </div>
-<div class="modal-body">
+<div
+  class="modal-body"
+  [class]="
+    getTemplateMode() !== 'dark' ? 'bg-dark text-white' : 'bg-light text-muted'
+  "
+>
   <div class="pt-2">
     <input
       id="dateOfBirth"
@@ -17,24 +27,37 @@
       (input)="search()"
     />
   </div>
-  <div class="row pt-2">
+  <div class="row pt-3">
     <a
-      class="col-12 d-flex justify-content-start border mb-2 p-2 bg-info bg-opacity-10 border border-info rounded"
+      class="col-12 d-flex justify-content-start border mb-2 p-2 border rounded"
       *ngFor="let item of dataFiltered"
       [href]="item.url"
       target="_blank"
+      [class]="
+        getTemplateMode() !== 'dark'
+          ? 'bg-dark border-light text-light'
+          : 'bg-info border-dark text-dark bg-opacity-10'
+      "
     >
-      <img [src]="'assets/directory/'+item.image" alt="" width="50" />
+      <img [src]="'assets/directory/' + item.image" alt="" width="50" />
       <div class="m-auto">
         {{ item.title }}
       </div>
     </a>
   </div>
 </div>
-<div class="modal-footer">
+<div
+  class="modal-footer"
+  [class]="
+    getTemplateMode() !== 'dark' ? 'bg-dark text-white' : 'bg-light text-muted'
+  "
+>
   <button
     type="button"
-    class="btn btn-outline-dark"
+    class="btn"
+    [class]="
+      getTemplateMode() !== 'dark' ? 'btn-outline-light' : 'btn-outline-dark'
+    "
     (click)="activeModal.close('Close click')"
   >
     Cerrar

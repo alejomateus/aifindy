@@ -1,12 +1,22 @@
-<div class="intro_container">
-  <div class="row">
+<div>
+  <div
+    class="row"
+    [style.background-color]="'#000'"
+  >
     <div class="col"></div>
-    <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-6">
       <img src="/assets/home/cover_page2.JPG" alt="cover_page" class="w-100" />
     </div>
     <div class="col"></div>
   </div>
-  <div class="row bg-dark">
+  <div
+    class="row"
+    [class]="
+      getTemplateMode() === 'dark'
+        ? 'bg-dark text-white'
+        : 'bg-light text-muted'
+    "
+  >
     <div class="col"></div>
     <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 p-4 text-center">
       <span class="bg-h2-semibold"
@@ -25,18 +35,51 @@
           (click)="navigate('categories', category.name)"
           *ngFor="let category of categories"
         >
-          <div class="card">
+          <div
+            class="card"
+            [class]="
+              getTemplateMode() === 'dark'
+                ? 'border-light text-light bg-dark'
+                : 'border-dark text-dark bg-light'
+            "
+          >
             <img
               class="card-img-top"
               [src]="'assets/categories/' + category.image"
               alt="Card image cap"
             />
-            <div class="card-body bg-dark">
-              <div class="card-title text-decoration-underline">
+            <div  class="card-body"
+            [class]="getTemplateMode() === 'dark'
+            ? 'border-light '
+            : 'border-dark ' ">
+              <div class="card-title text-decoration-underline" [class]="
+              getTemplateMode() === 'dark'
+                ? 'text-light'
+                : 'text-dark'
+            ">
                 <b>{{ category.title }}</b>
               </div>
             </div>
           </div>
+          <!-- <div class="card" [class]="getTemplateMode() === 'dark'
+          ? 'border-light text-light bg-dark'
+          : 'border-dark text-dark bg-light' ">
+            <img
+              class="card-img-top"
+              [src]="'assets/categories/' + category.image"
+              alt="Card image cap"
+            />
+            <div
+              class="card-body"
+              [class]="getTemplateMode() === 'dark'
+              ? 'border-light text-light bg-dark'
+              : 'border-dark text-dark bg-light' "
+            >
+              <div class="card-title text-decoration-underline">
+                <b>{{ category.title }}</b>
+              </div>
+            </div>
+          </div> -->
         </div>
       </div>
     </div>

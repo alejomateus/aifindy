@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
-
+  getTemplateMode(): string {
+    return localStorage.getItem('templateMode') || 'light';
+  }
 }

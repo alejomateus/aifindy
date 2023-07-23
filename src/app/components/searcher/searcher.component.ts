@@ -15,6 +15,11 @@ export class SearcherComponent {
     private utilsService: UtilsService
   ) {}
 
+
+  getTemplateMode(): string {
+    return localStorage.getItem('templateMode') || 'light';
+  }
+
   search() {
     if (this.searcher !== '') {
       this.dataFiltered = [...this.utilsService.getData()].filter(
