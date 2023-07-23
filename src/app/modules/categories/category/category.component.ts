@@ -68,4 +68,7 @@ export class CategoryComponent implements OnInit {
     }
     return cssClass;
   }
+  getTemplateMode(): string {
+    return localStorage.getItem('templateMode') || 'light';
+  }
 }

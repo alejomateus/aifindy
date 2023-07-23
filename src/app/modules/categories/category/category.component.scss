@@ -9,11 +9,9 @@
   margin: auto;
 }
 .card {
-  border-color: white !important;
   .card-body {
     height: 15rem;
     padding: 0.5rem;
-    color: white;
   }
 }
 .badge {
@@ -28,4 +26,8 @@
     height: 200px;
     max-height: 200px;
   }
+}
+
+.alert-success{
+    cursor: pointer;
 }

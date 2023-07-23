@@ -1,7 +1,10 @@
 <div class="intro_container">
   <div class="row">
     <div class="col"></div>
-    <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+    <div
+      class="col-xs-12 col-sm-12 col-md-10 col-lg-10"
+      [style.background-color]="'#000'"
+    >
       <img
         [src]="'/assets/categories/' + category.image"
         alt="cover_page"
@@ -10,7 +13,14 @@
     </div>
     <div class="col"></div>
   </div>
-  <div class="row bg-dark">
+  <div
+    class="row"
+    [class]="
+      getTemplateMode() === 'dark'
+        ? 'bg-dark text-white'
+        : 'bg-light text-muted'
+    "
+  >
     <div class="col"></div>
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-4 text-center">
       <span class="bg-h1-bold">{{ category.name }} </span>
@@ -18,7 +28,7 @@
         <div class="col"></div>
         <div class="col-xs-12 col-sm-10 col-md-6 col-lg-4 p-4 text-center">
           <div
-            class="alert alert-warning"
+            class="alert alert-success text-decoration-underline"
             (click)="navigate('categories')"
             role="alert"
           >
@@ -32,7 +42,14 @@
           class="col-xs-12 col-sm-12 col-md-6 col-lg-4 pb-4"
           *ngFor="let ia of data"
         >
-          <div class="card">
+          <div
+            class="card"
+            [class]="
+              getTemplateMode() === 'dark'
+                ? 'border-light text-light bg-dark'
+                : 'border-dark text-dark bg-light'
+            "
+          >
             <a [href]="ia.url" target="_blank">
               <img
                 class="card-img-top"
@@ -40,8 +57,15 @@
                 alt="Card image cap"
               />
             </a>
-            <div class="card-body bg-dark text-start">
-              <div class="card-title">{{ ia.title }}</div>
+            <div
+              class="card-body text-start fw-bolder border-top"
+              [class]="
+                getTemplateMode() === 'dark' ? 'border-light ' : 'border-dark '
+              "
+            >
+              <div class="card-title text-decoration-underline">
+                {{ ia.title }}
+              </div>
               <div class="card-subtitle mb-2 text-muted">
                 <span [class]="getClass(ia.accessType)">{{
                   ia.accessType
@@ -58,6 +82,32 @@
               </div>
             </div>
           </div>
+          <!-- <div class="card">
+            <a [href]="ia.url" target="_blank">
+              <img
+                class="card-img-top"
+                [src]="'assets/directory/' + ia.image"
+                alt="Card image cap"
+              />
+            </a>
+            <div class="card-body bg-dark text-start">
+              <div class="card-title  text-decoration-underline">{{ ia.title}}</div>
+              <div class="card-subtitle mb-2 text-muted">
+                <span [class]="getClass(ia.accessType)">{{
+                  ia.accessType
+                }}</span>
+              </div>
+              <p class="card-text bg-desc-regular">
+                {{ ia.description }}
+              </p>
+              <div class="pb-1" *ngIf="ia.price">{{ ia.price | currency }}</div>
+              <div class="card-text" *ngIf="ia.tags">
+                <span *ngFor="let tag of ia.tags" [className]="sort()">{{
+                  tag
+                }}</span>
+              </div>
+            </div>
+          </div> -->
         </div>
       </div>
     </div>

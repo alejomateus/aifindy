@@ -22,8 +22,6 @@ export class HeaderComponent implements OnInit {
     this.modalService.open(SearcherComponent);
   }
   getTemplateMode(): string {
-    console.log(localStorage.getItem('templateMode'));
-
     return localStorage.getItem('templateMode') === 'light' ? 'dark' : 'light';
   }
 
